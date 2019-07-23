@@ -1,0 +1,20 @@
+.btn {
+  border: none;
+  margin: 3rem auto;
+  border-radius: 2rem;
+  box-shadow: 0 0 3rem $gray-light;
+  padding: 3rem;
+  color: $turquoise-dark;
+  background-color: $white;
+
+  font-size: calc(#{$default-font-size} * 1.25);
+
+  font-weight: 700;
+  transition: $anim;
+
+  &:hover {
+    background-color: $turquoise-dark;
+    color: $white;
+    transform: scale(1.02);
+  }
+}

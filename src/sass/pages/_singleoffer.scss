@@ -1,0 +1,79 @@
+.single-offer {
+  width: 90vw;
+  height: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 2;
+    height: 55vh;
+    color: $gray-dark;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5rem;
+    box-shadow: 0 0 3rem $gray-light;
+
+    &--terapia_indywidualna {
+      background-image: linear-gradient(
+          to bottom,
+          rgba($turquoise-medium, 0.9) 0%,
+          rgba($turquoise-light, 0.9) 50%,
+          rgba($white, 0.9) 100%
+        ),
+        url(../images/beach-925740_1280.jpg);
+    }
+
+    &--terapia_par {
+      background-image: linear-gradient(
+          to bottom,
+          rgba($turquoise-medium, 0.9) 0%,
+          rgba($turquoise-light, 0.9) 50%,
+          rgba($white, 0.9) 100%
+        ),
+        url(../images/couple-690489_1280.jpg);
+    }
+
+    &--terapia_zdalna {
+      background-image: linear-gradient(
+          to bottom,
+          rgba($turquoise-medium, 0.9) 0%,
+          rgba($turquoise-light, 0.9) 50%,
+          rgba($white, 0.9) 100%
+        ),
+        url(../images/adult-3857516_1280.jpg);
+    }
+  }
+
+  &__heading {
+    padding: 3rem 0 0;
+  }
+
+  &__details {
+    font-size: $default-font-size;
+    &--table {
+      width: 100%;
+    }
+
+    &--suboffer {
+      display: flex;
+    }
+
+    &--column {
+      flex-basis: 47.5vw;
+    }
+
+    &--price {
+      margin-top: 3rem;
+      font-weight: 700;
+    }
+  }
+
+  &__return {
+    text-decoration: none;
+  }
+}

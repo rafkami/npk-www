@@ -1,0 +1,79 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 95%;
+
+  &__intro {
+    align-self: center;
+    text-align: center;
+    max-width: 70vw;
+    &--paragraph {
+      font-size: calc(#{$default-font-size} * 1.25);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem;
+    flex-wrap: wrap;
+  }
+
+  &__single {
+    display: flex;
+    padding: 0 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 48rem;
+    width: 48rem;
+    text-decoration: none;
+    color: $gray-dark;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 3rem $gray-light;
+    overflow-wrap: break-word;
+    transition: $anim;
+    &--terapia_indywidualna {
+      background-image: linear-gradient(
+          to bottom,
+          rgba($turquoise-medium, 0.9) 0%,
+          rgba($turquoise-light, 0.9) 50%,
+          rgba($white, 0.9) 100%
+        ),
+        url(../images/beach-925740_1280.jpg);
+    }
+    &--terapia_par {
+      background-image: linear-gradient(
+          to bottom,
+          rgba($turquoise-medium, 0.9) 0%,
+          rgba($turquoise-light, 0.9) 50%,
+          rgba($white, 0.9) 100%
+        ),
+        url(../images/couple-690489_1280.jpg);
+    }
+    &--terapia_zdalna {
+      background-image: linear-gradient(
+          to bottom,
+          rgba($turquoise-medium, 0.9) 0%,
+          rgba($turquoise-light, 0.9) 50%,
+          rgba($white, 0.9) 100%
+        ),
+        url(../images/adult-3857516_1280.jpg);
+    }
+    &--desc {
+      font-size: $default-font-size;
+    }
+
+    &--single-desc {
+      font-size: calc(#{$default-font-size} * 1.25);
+      font-weight: 700;
+    }
+    &:hover {
+      box-shadow: 0 0 50px $gray-dark;
+      transform: scale(1.02);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.header {
+  flex-basis: 10vh;
+  //   background-color: $gray-light;
+  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+  }
+
+  &__logo {
+    height: inherit;
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+
+  &__title {
+    text-decoration: none;
+    color: $black;
+    flex-basis: 30vw;
+    min-width: 30rem;
+    font-family: "Biryani", sans-serif;
+    font-weight: 700;
+    font-size: calc(#{$default-font-size} * 1.5);
+    padding-left: 5rem;
+    transition: $anim;
+
+    &--name {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $turquoise-dark;
+    }
+  }
+}
