@@ -16,21 +16,26 @@ const Map = ReactMapboxGl({
 const Contact = () => {
   return (
     <div className="page contact">
-      <div className="contact__heading heading-big">
-        <h3>Skontaktuj się ze mną</h3>
-        <p>- wybierz dogodną dla siebie formę</p>
+      <div className="contact__heading ">
+        <h3 className="heading-big">Skontaktuj się ze mną</h3>
+        <p className="contact__heading--sub">
+          - wybierz dogodną dla siebie formę
+        </p>
       </div>
       <div className="contact__it">
         <div className="contact__it--channel">
           <img src={icon1} alt="e-mail" className="contact__it--mail" />
-          <a href="mailto:abc.xyz@gmail.com" className="contact__it--link btn">
-            abc.xyz@gmail.com
+          <a
+            href="mailto:nprzybylek.krol@gmail.com"
+            className="contact__it--link btn"
+          >
+            nprzybylek.krol@gmail.com
           </a>
         </div>
         <div className="contact__it--channel">
           <img src={icon2} alt="telefon" />
-          <a href="tel:123456789" className="contact__it--link btn">
-            123 456 789
+          <a href="tel:660241352" className="contact__it--link btn">
+            660 241 352
           </a>
         </div>
         <div className="contact__it--channel">
@@ -39,17 +44,20 @@ const Contact = () => {
             href="https://www.znanylekarz.pl/natalia-przybylek-krol/seksuolog-psycholog-psychoterapeuta/warszawa"
             className="contact__it--link btn"
           >
-            Mój profil na portalu ZnanyLekarz.pl
+            Mój profil - ZnanyLekarz.pl
           </a>
         </div>
+      </div>
+      <div className="contact__availability">
+        Kontakt telefoniczny jest możliwy od poniedziałku do piątku w godzinach
+        10.00-18.00 - w pozostałych godzinach i dniach zapraszam do kontaktu
+        mailowego
       </div>
       <div className="contact__address">
         <div className="contact__address--wrapper">
           <div className="contact__address--cabinet">
             <h2 className="heading-medium">Gabinet nr 1</h2>
             <p className="contact__address--details">
-              Gabinet XYZ
-              <br />
               ul. Dolna 24 lok. 21
               <br />
               00-774 Warszawa
@@ -85,6 +93,8 @@ const Contact = () => {
             zoom={[16.5]}
             style={`mapbox://styles/mapbox/streets-v8`}
           >
+            <ScaleControl />
+            <ZoomControl />
             <Marker coordinates={[21.0297441, 52.2007513]}>
               <div className="contact__map--marker" />
             </Marker>

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  min-height: calc(80vh - (6rem + 2px));
   width: 95%;
 
   &__intro {
@@ -18,53 +19,89 @@
     justify-content: space-between;
     margin: 5rem;
     flex-wrap: wrap;
+    @include respond(tab-land) {
+      justify-content: space-evenly;
+    }
+    @include respond(tab-port) {
+      justify-content: space-around;
+    }
   }
 
   &__single {
     display: flex;
-    padding: 0 2rem;
+    padding: 0 4rem;
     flex-direction: column;
     justify-content: space-around;
-    height: 48rem;
-    width: 48rem;
+    height: 36rem;
+    width: 36rem;
     text-decoration: none;
     color: $gray-dark;
     text-align: center;
-    background-position: center;
-    background-size: cover;
+    @include bcg-format;
     border-radius: 50%;
     box-shadow: 0 0 3rem $gray-light;
     overflow-wrap: break-word;
     transition: $anim;
     &--terapia_indywidualna {
-      background-image: linear-gradient(
-          to bottom,
-          rgba($turquoise-medium, 0.9) 0%,
-          rgba($turquoise-light, 0.9) 50%,
-          rgba($white, 0.9) 100%
-        ),
-        url(../images/beach-925740_1280.jpg);
+      @include bcg-offer(url(../images/beach-925740_1280.jpg));
     }
-    &--terapia_par {
-      background-image: linear-gradient(
-          to bottom,
-          rgba($turquoise-medium, 0.9) 0%,
-          rgba($turquoise-light, 0.9) 50%,
-          rgba($white, 0.9) 100%
-        ),
-        url(../images/couple-690489_1280.jpg);
+    &--warsztaty_rozwojowe {
+      @include bcg-offer(
+        url(../images/adult-back-view-celebration-942419-b&w.jpg)
+      );
     }
-    &--terapia_zdalna {
-      background-image: linear-gradient(
-          to bottom,
-          rgba($turquoise-medium, 0.9) 0%,
-          rgba($turquoise-light, 0.9) 50%,
-          rgba($white, 0.9) 100%
-        ),
-        url(../images/adult-3857516_1280.jpg);
+    &--edukacja_seksualna {
+      @include bcg-offer(url(../images/glasses-3173397_1280.jpg));
+    }
+    &--trening_relaksacyjny {
+      @include bcg-offer(
+        url(../images/backlit-meditating-meditation-1051838-b&w.jpg)
+      );
+    }
+    @include respond(tab-land) {
+      height: 50rem;
+      width: 50rem;
+      margin-bottom: 5rem;
+    }
+    @include respond(tab-land-small) {
+      height: 40rem;
+      width: 40rem;
+      margin-bottom: 5rem;
+    }
+    @include respond(tab-port) {
+      height: 52rem;
+      width: 52rem;
+      margin-bottom: 5rem;
+    }
+    @include respond(tab-port-small) {
+      height: 32rem;
+      width: 32rem;
+      margin-bottom: 5rem;
+    }
+    @include respond(phone-land-small) {
+      height: 50rem;
+      width: 50rem;
+      margin-bottom: 5rem;
+    }
+    @include respond(phone-port) {
+      height: 40rem;
+      width: 40rem;
     }
     &--desc {
       font-size: $default-font-size;
+      @include respond(tab-land) {
+        font-size: calc(#{$default-font-size}* 1.25);
+      }
+    }
+
+    &--heading {
+      padding: 0 2rem;
+      @include respond(tab-land) {
+        font-size: calc(#{$default-font-size}* 1.5);
+      }
+      @include respond(tab-land-small) {
+        padding-top: 1rem;
+      }
     }
 
     &--single-desc {
@@ -74,6 +111,26 @@
     &:hover {
       box-shadow: 0 0 50px $gray-dark;
       transform: scale(1.02);
+    }
+  }
+
+  &__contract {
+    &-container {
+      align-self: center;
+      text-align: center;
+    }
+    &-head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-title {
+      font-size: calc(#{$default-font-size} * 1.25);
+      color: $turquoise-dark;
+      font-weight: bold;
+    }
+    &-toggler {
+      margin: 2rem auto;
     }
   }
 }

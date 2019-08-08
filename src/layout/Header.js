@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "./Menu";
+import Menu from "../components/Menu";
 import { NavLink } from "react-router-dom";
 import Logo from "../images/psychology_faces.jpg";
 

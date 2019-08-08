@@ -27,6 +27,32 @@
     font-size: calc(#{$default-font-size} * 1.5);
     padding-left: 5rem;
     transition: $anim;
+    @include respond(tab-land) {
+      flex-basis: 40vw;
+      font-size: calc(#{$default-font-size} * 1.2);
+      line-height: 1.4;
+    }
+    @include respond(tab-land-small) {
+      font-size: calc(#{$default-font-size} * 1.1);
+    }
+    @include respond(tab-port) {
+      flex-basis: 40vw;
+      font-size: calc(#{$default-font-size} * 1.75);
+    }
+    @include respond(tab-port-small) {
+      flex-basis: 35vw;
+      font-size: calc(#{$default-font-size} * 1.4);
+      line-height: 1.2;
+    }
+    @include respond(phone-land) {
+      font-size: calc(#{$default-font-size} * 1.15);
+    }
+    @include respond(phone-land-small) {
+      flex-basis: 40vw;
+    }
+    @include respond(phone-port) {
+      flex-basis: 65vw;
+    }
 
     &--name {
       text-transform: uppercase;

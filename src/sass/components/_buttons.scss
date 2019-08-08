@@ -17,4 +17,73 @@
     color: $white;
     transform: scale(1.02);
   }
+  &:focus {
+    outline-color: transparent;
+  }
+
+  &__menu-burger {
+    flex-shrink: 1;
+    position: relative;
+    display: block;
+    border: none;
+    background-color: #fff;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5000;
+    transition: $anim;
+
+    &--active {
+      transform: rotate(90deg);
+    }
+    &--active &--line {
+      &1 {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &3 {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &2 {
+        opacity: 0;
+      }
+    }
+
+    &-wrapper {
+      display: none;
+      @include respond(phone-port) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $turquoise-light;
+    }
+
+    &:hover &--line {
+      background-color: $white;
+    }
+
+    &--line {
+      position: absolute;
+      @include center-absolute-el;
+      height: 0.4rem;
+      width: 4rem;
+      margin: 0 auto;
+      background-color: $black;
+      border-radius: 0.2rem;
+      transition: transform 0.2s 0.2s ease-in-out;
+      &1 {
+        transform: translate(-50%, -300%);
+      }
+      &3 {
+        transform: translate(-50%, 200%);
+      }
+    }
+  }
 }

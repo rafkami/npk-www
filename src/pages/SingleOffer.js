@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as Markdown from "react-markdown";
 // import Service from "../components/Service";
 
 const SingleOffer = props => {
@@ -15,18 +16,19 @@ const SingleOffer = props => {
           <h3 className="single-offer__heading heading-big">{service.name}</h3>
           <div className="offer__single--single-desc">{service.shortDesc}</div>
           <div className="single-offer__details">
-            <div className="single-offer__details--table">
-              <div className="single-offer__details--suboffer">
-                <div className="single-offer__details--column">
-                  {service.detailsPsy}
-                </div>
-                <div className="single-offer__details--column">
-                  {service.detailsSex}
-                </div>
-              </div>
-            </div>
+            <Markdown
+              source={service.detailsPsy}
+              className="single-offer__details--desc"
+            />
+            <Markdown
+              source={service.detailsPsy2}
+              className="single-offer__details--desc2"
+            />
             <div className="single-offer__details--price">
-              Cena za 1 sesję (50 min.): {service.price} zł
+              {service.shortName === "warsztaty_rozwojowe" ||
+              service.shortName === "edukacja_seksualna"
+                ? `Cena ustalana indywidualnie`
+                : `Cena za 1 spotkanie (50 min.): ${service.price} zł`}
             </div>
           </div>
         </div>

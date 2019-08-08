@@ -35,7 +35,6 @@
 .fade-exit.fade-exit-active {
   opacity: 0;
   transform: translateX(-150%);
-  // transition: opacity 150ms linear;
   transition: opacity 500ms cubic-bezier(1, 0.03, 0.93, 0.51),
     transform 700ms cubic-bezier(1, 0.03, 0.93, 0.51);
 }
@@ -47,4 +46,7 @@
   right: unset;
   margin-left: 2.5%;
   margin-right: 2.5%;
+}
+.fade-enter-done.home {
+  animation: none;
 }

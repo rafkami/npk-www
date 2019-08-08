@@ -19,9 +19,9 @@ function App() {
         >
           <feColorMatrix
             type="matrix"
-            values="0.70 0 0 0 0.3 
-                    0.39 0 0 0 0.61  
-                    0.35 0 0 0 0.65 
+            values="0.95 0 0 0 0.05 
+                    0.69 0 0 0 0.31  
+                    0.65 0 0 0 0.35 
                     0    0 0 1 0"
           />
         </filter>

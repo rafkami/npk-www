@@ -1,36 +1,122 @@
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: stretch;
+  height: calc(80vh - (6rem + 2px));
 
-  &__block {
+  &__bcg {
+    position: relative;
+    width: 90vw;
+    height: 100%;
+    border: 1px solid $gray-light;
+    background-image: url(../images/smoke-1031060_1920.jpg);
+    background-position-x: center;
+    background-position-y: 70%;
+    background-size: cover;
+    overflow: hidden;
+    animation: appear 1s ease-in forwards;
+
+    @include respond(phone-port) {
+      background-position-x: 35%;
+    }
+  }
+
+  &__motto {
+    position: absolute;
     display: flex;
-    min-height: 23.333333vh;
+    flex-direction: column;
+    top: 62%;
+    left: 60%;
+    right: 5%;
+    color: $turquoise-medium;
+    opacity: 0;
+    font-size: $default-font-size;
+    animation: appear 1s 1s ease-in forwards;
+
+    @include respond(tab-land-small) {
+      top: 10%;
+      left: 75%;
+      right: 2.5%;
+      font-size: calc(#{$default-font-size} * 0.9);
+    }
+    @include respond(tab-port-small) {
+      top: 10%;
+      left: 75%;
+      right: 2.5%;
+      font-size: calc(#{$default-font-size} * 0.9);
+    }
+
+    @include respond(tab-port) {
+      top: 5%;
+      left: 10%;
+      right: 45%;
+      font-size: calc(#{$default-font-size} * 1.5);
+    }
+
+    @include respond(phone-port) {
+      right: 10%;
+      font-size: calc(#{$default-font-size} * 1.2);
+    }
+
+    &--italic {
+      font-style: italic;
+      padding-bottom: 0.5rem;
+    }
+    &--author {
+      text-align: right;
+    }
+  }
+
+  &__slogan {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    &--2 {
-      flex-direction: row-reverse;
+    top: 10%;
+    left: 10%;
+    right: 65%;
+    height: 60%;
+    @include respond(tab-port) {
+      top: 30%;
+      height: 40%;
+    }
+    @include respond(phone-port) {
+      top: 25%;
+      left: 25%;
     }
   }
 
-  &__intro {
-    flex-grow: 1;
-    &--paragraph {
-      font-size: $default-font-size;
-    }
-  }
-
-  &__img {
-    flex-basis: 23.3333vh;
-    height: 23.333333vh;
-    filter: url(#monochrome);
+  &__single {
+    color: $turquoise-medium;
+    opacity: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: calc(#{$default-font-size} * 2.5);
+    cursor: pointer;
+    transition: 0.2s ease-in;
     &--1 {
-      padding-left: calc(#{$default-font-size} * 2);
+      animation: appear 0.5s 2s ease-in forwards;
     }
     &--2 {
-      padding-right: calc(#{$default-font-size} * 2);
+      animation: appear 0.5s 2.5s ease-in forwards;
     }
     &--3 {
-      padding-left: calc(#{$default-font-size} * 2);
+      animation: appear 0.5s 3s ease-in forwards;
+    }
+    &--4 {
+      animation: appear 0.5s 3.5s ease-in forwards;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: $turquoise-light;
+    }
+    @include respond(tab-land-small) {
+      font-size: calc(#{$default-font-size} * 2);
+    }
+    @include respond(tab-port-small) {
+      font-size: calc(#{$default-font-size} * 2);
     }
   }
 }

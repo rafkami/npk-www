@@ -9,6 +9,12 @@ body {
 
 .heading-big {
   font-size: calc(#{$default-font-size} * 1.75);
+  @include respond(tab-port) {
+    font-size: calc(#{$default-font-size} * 1.5);
+  }
+  // @include respond(phone-land-small) {
+  //   font-size: calc(#{$default-font-size} * 1.25);
+  // }
 }
 
 .heading-medium {

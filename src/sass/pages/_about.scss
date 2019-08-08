@@ -1,25 +1,110 @@
 .about {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  min-height: calc(80vh - (6rem + 2px));
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 
   &__block {
     display: flex;
     flex-direction: column;
     min-height: 70vh;
     justify-content: space-between;
+    max-width: 300vw;
+    @include respond(tab-land-small) {
+      max-width: 430vw;
+    }
+    @include respond(tab-port) {
+      min-height: 30vh;
+      margin-bottom: 3vh;
+      max-width: 450vw;
+    }
+    @include respond(phone-port) {
+      min-height: 30vh;
+      margin-bottom: 3vh;
+      max-width: 90vw;
+    }
   }
 
   &__description {
-    flex-grow: 1;
     padding-right: calc(#{$default-font-size} * 2);
+    &--heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
     &--paragraph {
-      font-size: $default-font-size;
+      font-size: calc(#{$default-font-size} * 1.25);
     }
   }
 
   &__img {
-    flex-basis: 70vh;
     height: 70vh;
     filter: url(#monochrome);
+    @include respond(tab-land) {
+      height: 70vh;
+    }
+    @include respond(tab-land-small) {
+      height: 200vh;
+    }
+    @include respond(tab-port) {
+      position: relative;
+      transform: translateY(-5%);
+      height: 60vh;
+    }
+    @include respond(tab-port-small) {
+      position: relative;
+      transform: translateY(-10%);
+      height: 60vh;
+    }
+    @include respond(phone-land) {
+      height: 150vh;
+    }
+    @include respond(phone-land-small) {
+      height: 250vh;
+    }
+
+    &-wrapper {
+      @include respond(tab-land) {
+        overflow: hidden;
+        width: 1600px;
+        max-width: 600px;
+        text-indent: -50%;
+      }
+      @include respond(tab-land-small) {
+        width: 1600px;
+        max-width: 400px;
+        text-indent: -90%;
+      }
+      @include respond(tab-port) {
+        overflow: hidden;
+        height: 100rem;
+        max-height: 40vh;
+        text-indent: 0%;
+      }
+      @include respond(tab-port-small) {
+        max-height: 32vh;
+      }
+      @include respond(phone-land) {
+        width: 1100px;
+        max-width: 240px;
+        text-indent: -80%;
+      }
+      @include respond(phone-land-small) {
+        height: 220vh;
+        max-height: none;
+        width: 1300px;
+        max-width: 300px;
+        text-indent: -130%;
+      }
+      @include respond(phone-port) {
+        overflow: hidden;
+        max-width: 85vw;
+        height: 100rem;
+        max-height: 40vh;
+        text-indent: -10%;
+      }
+    }
   }
 }
