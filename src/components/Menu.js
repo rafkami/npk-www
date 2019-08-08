@@ -41,7 +41,7 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="menu-wrapper">
-        <div class="btn__menu-burger-wrapper">
+        <div className="btn__menu-burger-wrapper">
           <BurgerBtn
             click={this.toggleMenu}
             showSideMenu={this.state.showSideMenu}

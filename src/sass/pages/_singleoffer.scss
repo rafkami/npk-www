@@ -11,11 +11,24 @@
     justify-content: space-around;
     flex-grow: 2;
     height: 55vh;
+    padding: 0 2rem 1rem;
     color: $gray-dark;
     text-align: center;
     @include bcg-format;
     border-radius: 5rem;
     box-shadow: 0 0 3rem $gray-light;
+    @include respond(tab-port) {
+      height: auto;
+      min-height: 65vh;
+    }
+    @include respond(phone-port) {
+      height: auto;
+      min-height: 60vh;
+    }
+    @include respond(tab-land60-small) {
+      height: auto;
+      min-height: 45vh;
+    }
 
     &--terapia_indywidualna {
       @include bcg-offer(url(../images/beach-925740_1280.jpg));
@@ -39,12 +52,24 @@
 
   &__heading {
     padding: 3rem 0 0;
+    @include respond(tab-port) {
+      font-size: calc(#{$default-font-size} * 2.25);
+    }
+    @include respond(phone-port) {
+      font-size: calc(#{$default-font-size} * 1.75);
+    }
   }
 
   &__details {
     font-size: $default-font-size;
     width: 90%;
     margin: 0 auto;
+    @include respond(tab-land) {
+      font-size: calc(#{$default-font-size} * 0.8);
+    }
+    @include respond(tab-port) {
+      font-size: calc(#{$default-font-size} * 1.25);
+    }
 
     &--desc2 {
       list-style-position: inside;
@@ -52,6 +77,9 @@
       width: 70%;
       text-align: left;
       column-count: 2;
+      @include respond(phone-port) {
+        column-count: 1;
+      }
     }
 
     &--price {
@@ -62,5 +90,6 @@
 
   &__return {
     text-decoration: none;
+    margin-bottom: 0;
   }
 }

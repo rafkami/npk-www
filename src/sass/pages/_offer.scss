@@ -107,6 +107,13 @@
     &--single-desc {
       font-size: calc(#{$default-font-size} * 1.25);
       font-weight: 700;
+      @include respond(tab-port) {
+        font-size: calc(#{$default-font-size} * 1.75);
+      }
+      @include respond(phone-port) {
+        font-size: calc(#{$default-font-size} * 1.25);
+        padding: 2rem 0;
+      }
     }
     &:hover {
       box-shadow: 0 0 50px $gray-dark;
