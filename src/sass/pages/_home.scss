@@ -9,7 +9,7 @@
     width: 90vw;
     height: 100%;
     border: 1px solid $gray-light;
-    background-image: url(../images/smoke-1031060_1920.jpg);
+    background-image: url(../images/DSC_1093.jpg);
     background-position-x: center;
     background-position-y: 70%;
     background-size: cover;
@@ -34,11 +34,24 @@
     animation: appear 1s 1s ease-in forwards;
 
     @include respond(tab-land-small) {
-      top: 10%;
-      left: 75%;
+      top: 50%;
+      left: 55%;
       right: 2.5%;
       font-size: calc(#{$default-font-size} * 0.9);
     }
+    @include respond(phone-land) {
+      top: 60%;
+      left: 55%;
+      right: 2.5%;
+      font-size: calc(#{$default-font-size} * 1);
+    }
+    @include respond(phone-land-small) {
+      top: 60%;
+      left: 55%;
+      right: 2.5%;
+      font-size: calc(#{$default-font-size} * 0.9);
+    }
+
     @include respond(tab-port-small) {
       top: 10%;
       left: 75%;
@@ -47,13 +60,14 @@
     }
 
     @include respond(tab-port) {
-      top: 5%;
-      left: 10%;
-      right: 45%;
+      top: 75%;
+      left: 50%;
+      right: 5%;
       font-size: calc(#{$default-font-size} * 1.5);
     }
 
     @include respond(phone-port) {
+      top: 60%;
       right: 10%;
       font-size: calc(#{$default-font-size} * 1.2);
     }
@@ -78,12 +92,12 @@
     right: 65%;
     height: 60%;
     @include respond(tab-port) {
-      top: 30%;
+      top: 55%;
       height: 40%;
     }
     @include respond(phone-port) {
-      top: 25%;
-      left: 25%;
+      top: 0%;
+      left: 15%;
     }
   }
 

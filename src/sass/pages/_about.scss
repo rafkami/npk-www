@@ -30,12 +30,16 @@
 
   &__description {
     padding-right: calc(#{$default-font-size} * 2);
+    padding-bottom: 1rem;
     &--heading {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     &--paragraph {
       font-size: calc(#{$default-font-size} * 1.25);
+      @include respond(tab-port-small) {
+        font-size: calc(#{$default-font-size} * 1.1);
+      }
     }
   }
 
@@ -56,7 +60,7 @@
     @include respond(tab-port-small) {
       position: relative;
       transform: translateY(-10%);
-      height: 60vh;
+      height: 50vh;
     }
     @include respond(phone-land) {
       height: 150vh;
@@ -84,7 +88,7 @@
         text-indent: 0%;
       }
       @include respond(tab-port-small) {
-        max-height: 32vh;
+        max-height: 36vh;
       }
       @include respond(phone-land) {
         width: 1100px;

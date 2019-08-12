@@ -12,12 +12,21 @@ const About = () => {
         </div>
         <div className="about__description">
           <p className="about__description--paragraph">
-            Zawodowo: psycholog, psychoterapeuta, seksuolog. Jestem absolwentką
-            studiów psychologicznych oraz studiów podyplomowych z zakresu
-            seksuologii klinicznej w Szkole Wyższej Psychologii Społecznej w
-            Warszawie. Ukończyłam 4-letnie szkolenie z zakresu psychoterapii
-            poznawczo – behawioralnej w Centrum CBT. Posiadam certyfikat
-            Terapeuty Poznawczo-Behawioralnego PTTPB (certyfikat nr 519).
+            Zawodowo: psycholog, psychoterapeuta, seksuolog.
+          </p>
+        </div>
+        <div className="about__description">
+          <p className="about__description--paragraph">
+            Jestem absolwentką studiów psychologicznych oraz studiów
+            podyplomowych z zakresu seksuologii klinicznej w Szkole Wyższej
+            Psychologii Społecznej w Warszawie. Ukończyłam 4-letnie szkolenie z
+            zakresu psychoterapii poznawczo – behawioralnej w Centrum CBT.
+            Posiadam certyfikat Terapeuty Poznawczo-Behawioralnego PTTPB
+            (certyfikat nr 519).
+          </p>
+        </div>
+        <div className="about__description">
+          <p className="about__description--paragraph">
             Doświadczenie zawodowe zdobywałam na stażach i wolontariatach, m.in.
             w Poradni Zdrowia Psychicznego "Arka", Poradni Seksuologicznej i
             Patologii Współżycia, Poradni Psychologiczno-pedagogicznej oraz
