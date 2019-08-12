@@ -19,6 +19,7 @@
     justify-content: space-between;
     margin: 5rem;
     flex-wrap: wrap;
+    flex-grow: 1;
     @include respond(tab-land) {
       justify-content: space-evenly;
     }

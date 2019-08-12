@@ -39,6 +39,12 @@ body {
   color: $white;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 .app {
   display: flex;
   flex-direction: column;

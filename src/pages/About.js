@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../images/npk_b&w_new.jpg";
+import myImage from "../images/npk_color_new.jpg";
 
 const About = () => {
   return (
@@ -10,12 +10,19 @@ const About = () => {
             Kim jestem?
           </h3>
         </div>
-        <div className="about__description">
+        <div className="about__description clearfix">
+          <div className="about__img-wrapper">
+            <img
+              src={myImage}
+              alt="Natalia Przybyłek-Król"
+              className="about__img"
+            />
+          </div>
           <p className="about__description--paragraph">
             Zawodowo: psycholog, psychoterapeuta, seksuolog.
           </p>
-        </div>
-        <div className="about__description">
+          <br />
+          <br />
           <p className="about__description--paragraph">
             Jestem absolwentką studiów psychologicznych oraz studiów
             podyplomowych z zakresu seksuologii klinicznej w Szkole Wyższej
@@ -24,8 +31,8 @@ const About = () => {
             Posiadam certyfikat Terapeuty Poznawczo-Behawioralnego PTTPB
             (certyfikat nr 519).
           </p>
-        </div>
-        <div className="about__description">
+          <br />
+          <br />
           <p className="about__description--paragraph">
             Doświadczenie zawodowe zdobywałam na stażach i wolontariatach, m.in.
             w Poradni Zdrowia Psychicznego "Arka", Poradni Seksuologicznej i
@@ -34,8 +41,8 @@ const About = () => {
             Patologii Współżycia Szpitala Nowowiejskiego w Warszawie oraz w
             praktyce prywatnej.
           </p>
-        </div>
-        <div className="about__description">
+          <br />
+          <br />
           <p className="about__description--paragraph">
             Prywatnie: miłośniczka przyrody, fotografii, podróżowania w rytmie
             slow, nauczycielka jogi. Cenię sobie oparty na szacunku i uważności
@@ -43,8 +50,8 @@ const About = () => {
             może wspierać proces zdrowienia, co też potwierdzają badania
             naukowe.
           </p>
-        </div>
-        <div className="about__description">
+          <br />
+          <br />
           <p className="about__description--paragraph">
             Praca z ludźmi daje mi wiele radości. To wyjątkowe doświadczenie móc
             towarzyszyć człowiekowi w niełatwym dla niego procesie zmiany.
@@ -53,13 +60,6 @@ const About = () => {
             najpiękniejszym elementem mojej pracy.
           </p>
         </div>
-      </div>
-      <div className="about__img-wrapper">
-        <img
-          src={myImage}
-          alt="Natalia Przybyłek-Król"
-          className="about__img"
-        />
       </div>
     </div>
   );
