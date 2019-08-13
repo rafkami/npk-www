@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://weather-teller.netlify.com/* https://www.weather-teller.pl/:splat 301!
