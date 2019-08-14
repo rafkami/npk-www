@@ -48,6 +48,9 @@
         url(../images/backlit-meditating-meditation-1051838-b&w.jpg)
       );
     }
+    &--terapia_zdalna {
+      @include bcg-offer(url(../images/adult-3857516_1280.jpg));
+    }
   }
 
   &__heading {

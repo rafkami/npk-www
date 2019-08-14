@@ -50,8 +50,8 @@ const Contact = () => {
       </div>
       <div className="contact__availability">
         Kontakt telefoniczny jest możliwy od poniedziałku do piątku w godzinach
-        10.00-18.00 - w pozostałych godzinach i dniach zapraszam do kontaktu
-        mailowego
+        10.00-18.00
+        <br />W pozostałych godzinach i dniach zapraszam do kontaktu mailowego
       </div>
       <div className="contact__address">
         <div className="contact__address--wrapper">
@@ -66,7 +66,7 @@ const Contact = () => {
           <Map
             className="contact__map"
             center={[21.0259943, 52.2003472]}
-            zoom={[16.5]}
+            zoom={[15]}
             style={`mapbox://styles/mapbox/streets-v8`}
           >
             <ScaleControl />
@@ -90,7 +90,7 @@ const Contact = () => {
           <Map
             className="contact__map"
             center={[21.0297441, 52.2007513]}
-            zoom={[16.5]}
+            zoom={[15]}
             style={`mapbox://styles/mapbox/streets-v8`}
           >
             <ScaleControl />

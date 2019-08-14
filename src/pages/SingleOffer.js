@@ -28,7 +28,7 @@ const SingleOffer = props => {
               {service.shortName === "warsztaty_rozwojowe" ||
               service.shortName === "edukacja_seksualna"
                 ? `Cena ustalana indywidualnie`
-                : `Cena za 1 spotkanie (50 min.): ${service.price} zł`}
+                : `Cena za 1 spotkanie / sesję (50 min.): ${service.price} zł`}
             </div>
           </div>
         </div>

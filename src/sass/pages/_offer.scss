@@ -31,10 +31,11 @@
   &__single {
     display: flex;
     padding: 0 4rem;
+    margin-bottom: 2rem;
     flex-direction: column;
     justify-content: space-around;
-    height: 36rem;
-    width: 36rem;
+    height: 50rem;
+    width: 50rem;
     text-decoration: none;
     color: $gray-dark;
     text-align: center;
@@ -58,6 +59,9 @@
       @include bcg-offer(
         url(../images/backlit-meditating-meditation-1051838-b&w.jpg)
       );
+    }
+    &--terapia_zdalna {
+      @include bcg-offer(url(../images/adult-3857516_1280.jpg));
     }
     @include respond(tab-land) {
       height: 50rem;
