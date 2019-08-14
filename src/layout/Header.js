@@ -10,7 +10,7 @@ const Header = () => {
       <NavLink to="/" exact className="header__title">
         <span className="header__title--name">Natalia Przybyłek-Król</span>
         <br />
-        strona osobista
+        <span className="header__title--subtitle">psycholog</span>&bull;<span className="header__title--subtitle">psychoterapeuta</span>&bull;<span className="header__title--subtitle">seksuolog</span>
       </NavLink>
       <Menu />
     </div>

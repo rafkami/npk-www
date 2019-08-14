@@ -51,11 +51,37 @@
       flex-basis: 40vw;
     }
     @include respond(phone-port) {
+      display: flex;
+      flex-wrap: wrap;
       flex-basis: 65vw;
+      padding-left: 3rem;
+      font-size: calc(#{$default-font-size} * 1.47);
     }
 
     &--name {
       text-transform: uppercase;
+      @include respond(phone-port) {
+        flex-basis: 65vw;
+        flex-grow: 1;
+        line-height: 2.5;
+      }
+    }
+
+    &--subtitle {
+      &:not(:last-of-type) {
+      padding-right: 1rem;
+    }
+      &:nth-last-of-type(2), &:last-of-type {
+      padding-left: 1rem;
+      }
+      &:last-of-type{
+      @include respond(phone-port) {
+      padding-left: 0;
+      }
+    }
+  }
+    &--wob {
+
     }
 
     &:hover {

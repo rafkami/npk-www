@@ -49,9 +49,18 @@
       }
     }
 
+    @include respond(tab-land-small) {
+      height: 4.5rem;
+      width: 4.5rem;
+    }
+
     &-wrapper {
       display: none;
-      @include respond(phone-port) {
+      @include respond(tab-port) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include respond(tab-land-small) {
         display: flex;
         justify-content: flex-end;
       }
@@ -83,6 +92,9 @@
       }
       &3 {
         transform: translate(-50%, 200%);
+      }
+      @include respond(tab-land-small) {
+        width: 3rem;
       }
     }
   }
