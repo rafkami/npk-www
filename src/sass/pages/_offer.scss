@@ -1,7 +1,7 @@
 .offer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: calc(80vh - (6rem + 2px));
   width: 95%;
 
@@ -16,7 +16,7 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 5rem;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -31,7 +31,7 @@
   &__single {
     display: flex;
     padding: 0 4rem;
-    margin-bottom: 2rem;
+    margin: 0 4rem 8rem;
     flex-direction: column;
     justify-content: space-around;
     height: 50rem;

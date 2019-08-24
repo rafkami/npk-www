@@ -1,6 +1,6 @@
 .single-offer {
   width: 90vw;
-  height: 90%;
+  min-height: 90%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 2;
-    height: 55vh;
+    min-height: 55vh;
     padding: 0 2rem 1rem;
     color: $gray-dark;
     text-align: center;
@@ -25,7 +25,7 @@
       height: auto;
       min-height: 60vh;
     }
-    @include respond(tab-land60-small) {
+    @include respond(tab-land-small) {
       height: auto;
       min-height: 45vh;
     }
