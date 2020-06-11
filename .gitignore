@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+!mapbox-gl
+*mapbox-gl/src
+!mapbox-gl/src/css
 /.pnp
 .pnp.js
 
