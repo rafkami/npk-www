@@ -31,25 +31,25 @@
     }
 
     &--terapia_indywidualna {
-      @include bcg-offer(url(../images/beach-925740_1280.jpg));
+      @include bcg-offer(url(../../images/beach-925740_1280.jpg));
     }
 
     &--warsztaty_rozwojowe {
       @include bcg-offer(
-        url(../images/adult-back-view-celebration-942419-b&w.jpg)
+        url(../../images/adult-back-view-celebration-942419-b&w.jpg)
       );
     }
 
     &--edukacja_seksualna {
-      @include bcg-offer(url(../images/glasses-3173397_1280.jpg));
+      @include bcg-offer(url(../../images/glasses-3173397_1280.jpg));
     }
     &--trening_relaksacyjny {
       @include bcg-offer(
-        url(../images/backlit-meditating-meditation-1051838-b&w.jpg)
+        url(../../images/backlit-meditating-meditation-1051838-b&w.jpg)
       );
     }
     &--terapia_zdalna {
-      @include bcg-offer(url(../images/adult-3857516_1280.jpg));
+      @include bcg-offer(url(../../images/adult-3857516_1280.jpg));
     }
   }
 

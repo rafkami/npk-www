@@ -35,7 +35,7 @@ const Contact = () => {
         <div className="contact__it--channel">
           <img src={icon2} alt="telefon" />
           <a href="tel:660241352" className="contact__it--link btn">
-            660 241 352
+            798 987 192
           </a>
         </div>
         <div className="contact__it--channel">
@@ -80,22 +80,20 @@ const Contact = () => {
           <div className="contact__address--cabinet">
             <h3 className="heading-medium">Gabinet nr 2</h3>
             <p className="contact__address--details">
-              Centrum Psychoterapii
+              ul. Bukowińska 8 lok. 403
               <br />
-              ul. Dolna 42
-              <br />
-              00-774 Warszawa
+              02-703 Warszawa
             </p>
           </div>
           <Map
             className="contact__map"
-            center={[21.0297441, 52.2007513]}
+            center={[21.027732, 52.180020]}
             zoom={[15]}
             style={`mapbox://styles/mapbox/streets-v8`}
           >
             <ScaleControl />
             <ZoomControl />
-            <Marker coordinates={[21.0297441, 52.2007513]}>
+            <Marker coordinates={[21.027732, 52.180020]}>
               <div className="contact__map--marker" />
             </Marker>
           </Map>
