@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "contentful": "^7.14.4",
-    "mapbox-gl": "^1.2.1",
+    "mapbox-gl": "^1.13.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
